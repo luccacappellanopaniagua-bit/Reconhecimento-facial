@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FaceID Lab | Reconhecimento facial</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header class="topbar"><div class="logo">F</div><div><b>FaceID Lab</b><small>RECONHECIMENTO FACIAL LOCAL</small></div><span class="privacy">● Processamento local</span></header>
+<main class="layout">
+<section class="intro"><div class="eyebrow">VISÃO COMPUTACIONAL · EMBEDDINGS</div><h1>Reconhecimento facial<br><span>em tempo real.</span></h1><p>Cadastre pessoas com consentimento e teste o reconhecimento pela câmera do navegador.</p><div class="legend"><span><i class="green"></i> Rosto reconhecido</span><span><i class="red"></i> Não reconhecido</span></div></section>
+<section class="workspace">
+<div class="camera-card"><div class="cardhead"><div><h2>Câmera ao vivo</h2><p id="cameraStatus">Câmera desligada</p></div><span class="live">● AO VIVO</span></div>
+<div class="video-wrap"><video id="video" autoplay playsinline muted></video><canvas id="overlay"></canvas><div id="placeholder" class="placeholder"><div class="camicon">◎</div><b>Sua câmera aparecerá aqui</b><span>Permita o acesso à câmera quando o navegador perguntar.</span></div><div id="videoLabel" class="vlabel">AGUARDANDO CÂMERA</div></div>
+<div class="actions"><button class="primary" id="startCamera">Iniciar câmera</button><button id="stopCamera" disabled>Desligar</button><button id="toggleRecognition" disabled>Iniciar reconhecimento</button></div><p class="hint">Boa iluminação e um rosto bem visível ajudam na detecção.</p></div>
+<aside class="side">
+<div class="panel"><div class="paneltitle"><div class="plus">＋</div><div><h2>Cadastrar pessoa</h2><p>Salve um embedding facial</p></div></div><label for="name">Nome da pessoa</label><input id="name" maxlength="80" placeholder="Ex.: Lucca"><label class="consent"><input type="checkbox" id="consent"><span>Confirmo que a pessoa autorizou o cadastro e o uso dos dados biométricos neste protótipo.</span></label><button class="primary full" id="register" disabled>Capturar rosto e cadastrar</button><p class="hint">Deixe apenas um rosto no enquadramento.</p></div>
+<div class="panel"><div class="rosterhead"><div><h2>Pessoas cadastradas</h2><p>Armazenadas localmente em JSON</p></div><span class="count" id="count">0</span></div><div id="peopleList" class="people"><div class="empty">Nenhuma pessoa cadastrada.</div></div></div>
+</aside></section><div id="notice" class="notice" role="status"></div><footer>Protótipo educacional · Os resultados são estimativas, não prova de identidade.</footer>
+</main><script src="/static/app.js"></script></body></html>
